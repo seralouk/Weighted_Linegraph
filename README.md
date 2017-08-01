@@ -1,4 +1,4 @@
-# Weighted_Linegraph
+# Weighted Linegraph
 
 
 Dependencies: numpy, igraph modules
