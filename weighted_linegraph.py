@@ -7,14 +7,13 @@ def weighted_linegraph(g):
 	
 	Input
 	------
-	g: an igraph graph object
+	g: an igraph.Graph object
 	
 	Output
 	------
-	lg: the weighted linegraph of the initial graph g
+	lg: the weighted linegraph of the initial igraph.Graph (g)
 
 	"""
-	g = g
 	flag = g.is_connected()
 	if flag:
 
