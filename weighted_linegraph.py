@@ -1,12 +1,19 @@
-##################################################
-##################################################
-# Creator: Serafeim Loukas, email: seralouk@hotmail.com 
-# All rights reserved 
-
 from igraph import *
 from numpy import *
 
 def weighted_linegraph(g):
+	"""
+	Author: Serafeim Loukas, EPFL, email: serafeim.loukas(at)epfl.ch
+	
+	Input
+	------
+	g: an igraph graph object
+	
+	Output
+	------
+	lg: the weighted linegraph of the initial graph g
+
+	"""
 	g = g
 	flag = g.is_connected()
 	if flag:
@@ -33,7 +40,22 @@ def weighted_linegraph(g):
 			fill_diagonal(wLA2, 0)
 			lg = Graph.Weighted_Adjacency(wLA2.tolist(), mode = ADJ_UNDIRECTED, attr="weight" )
 	else:
-		print('the graph is not connected')
+		print('The graph is not connected')
 		lg = None
 
 	return lg
+
+
+# Example
+# Create a weighted graph
+
+g = Graph()
+g.add_vertices(5)
+g.add_edges([(0,1),(1,2),(2,3),(3,4),(0,4)])
+g.es["weight"] = range(1,g.vcount() +1)
+
+
+# Call the function
+weighted_lg = weighted_linegraph(g)
+# print summary of the graph
+summary(weighted_lg)
