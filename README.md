@@ -1,4 +1,5 @@
-Weighted Linegraph
+# Weighted Linegraph in Python using iGraph module
 
 
-Dependencies: numPy, iGraph modules
+
+## Dependencies: numPy, iGraph
