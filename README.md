@@ -2,4 +2,4 @@
 
 
 
-## Dependencies: numPy, iGraph
+## Dependencies: numPy, iGraph
